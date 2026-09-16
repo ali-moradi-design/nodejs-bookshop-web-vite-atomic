@@ -1,12 +1,8 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Navigate, Outlet, Route, Routes } from 'react-router-dom';
 import { AppProviders } from '@/app/providers';
-import { StorefrontTemplate } from '@/components/templates';
-import { PanelTemplate } from '@/components/templates';
-import { AdminTemplate } from '@/components/templates';
-import { Header } from '@/components/organisms';
-import { Footer } from '@/components/organisms';
-import { RequireAuth } from '@/components/organisms';
+import { StorefrontTemplate, PanelTemplate, AdminTemplate } from '@/components/templates';
+import { Header, Footer, RequireAuth } from '@/components/organisms';
 import { PageLoader } from '@/components/atoms';
 
 const HomePage = lazy(() =>

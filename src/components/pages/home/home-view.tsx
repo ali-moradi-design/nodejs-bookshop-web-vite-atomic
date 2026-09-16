@@ -1,9 +1,12 @@
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { useFeaturedBooksQuery } from '@/lib/book';
-import { BookGrid, BookGridSkeleton } from '@/components/organisms';
-import { HomeHero } from '@/components/organisms';
-import { RecentlyViewedSection } from '@/components/organisms';
+import {
+  BookGrid,
+  BookGridSkeleton,
+  HomeHero,
+  RecentlyViewedSection,
+} from '@/components/organisms';
 import { Alert } from '@/components/atoms';
 import { EmptyState } from '@/components/molecules';
 import { ApiError } from '@/lib/api';

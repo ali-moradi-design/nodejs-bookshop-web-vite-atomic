@@ -1,3 +1,4 @@
+/** Public API — route page screens. */
 export { HomePage } from './home';
 export { CatalogPage } from './catalog';
 export { BookDetailPage } from './book-detail';
@@ -5,3 +6,19 @@ export { CartPage } from './cart';
 export { CheckoutPage } from './checkout';
 export { LoginPage } from './login';
 export { RegisterPage } from './register';
+export { PanelDashboardPage } from './panel/dashboard';
+export { ProfilePage } from './panel/profile';
+export { PanelOrdersPage } from './panel/orders';
+export { PanelOrderDetailPage } from './panel/order-detail';
+export { FavoritesPage } from './panel/favorites';
+export { MyReviewsPage } from './panel/reviews';
+export { ReportIssuePage } from './panel/report';
+export { AdminDashboardPage } from './admin/dashboard';
+export { AdminBooksPage } from './admin/books';
+export { AdminOrdersPage } from './admin/orders';
+export { AdminUsersPage } from './admin/users';
+export { AdminRolesPage } from './admin/roles';
+export { AdminPermissionsPage } from './admin/permissions';
+export { AdminDiscountsPage } from './admin/discounts';
+export { AdminReportsPage } from './admin/reports';
+export { AdminAnalyticsPage } from './admin/analytics';
