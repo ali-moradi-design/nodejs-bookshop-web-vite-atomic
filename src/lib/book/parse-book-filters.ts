@@ -1,5 +1,5 @@
-import type { BookListParams } from '@/lib/book';
-import { BOOK_PRICE_MAX, BOOK_PRICE_MIN } from '@/lib/book';
+import type { BookListParams } from './types';
+import { BOOK_PRICE_MAX, BOOK_PRICE_MIN } from './categories';
 
 export const DEFAULT_SORT: NonNullable<BookListParams['sort']> = 'createdAt';
 export const DEFAULT_ORDER: NonNullable<BookListParams['order']> = 'desc';

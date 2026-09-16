@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { reportKeys, fetchRevenue } from '@/lib/report/report-api';
+import { reportKeys, fetchRevenue } from './report-api';
 
 export function useRevenueQuery(from?: string, to?: string) {
   return useQuery({

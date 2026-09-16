@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/atoms';
-import { useClearCartMutation } from '@/lib/cart/use-clear-cart-mutation';
+import { useClearCartMutation } from '@/lib/cart';
 
 export function ClearCartButton() {
   const { t } = useTranslation();

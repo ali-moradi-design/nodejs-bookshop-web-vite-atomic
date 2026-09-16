@@ -15,7 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/atoms';
-import { useUpdateIssueStatusMutation } from '@/lib/report/use-update-issue-status-mutation';
+import { useUpdateIssueStatusMutation } from '@/lib/report';
 
 export function AdminReportsPanel() {
   const { t } = useTranslation();

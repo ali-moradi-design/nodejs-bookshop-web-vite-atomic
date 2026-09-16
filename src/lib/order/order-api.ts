@@ -1,6 +1,6 @@
 import { apiGet, apiPatch, apiPost } from '@/lib/api';
 import type { ApiData } from '@/lib/api';
-import type { Order, OrderStatus } from '@/lib/order/types';
+import type { Order, OrderStatus } from './types';
 
 export const orderKeys = {
   all: ['orders'] as const,

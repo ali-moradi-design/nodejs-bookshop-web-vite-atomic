@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { reportKeys, fetchTopBooks } from '@/lib/report/report-api';
+import { reportKeys, fetchTopBooks } from './report-api';
 
 export function useTopBooksQuery(from?: string, to?: string) {
   return useQuery({

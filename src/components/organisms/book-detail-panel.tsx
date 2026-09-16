@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useBookQuery } from '@/lib/book';
+import { useBookQuery, useTrackRecentlyViewed } from '@/lib/book';
 import { useReviewsQuery } from '@/lib/review';
 import { useAuthStore } from '@/lib/auth';
 import { usePreferences, usePageTitle } from '@/lib/hooks';
@@ -16,7 +16,6 @@ import {
 } from '@/components/molecules';
 import { CreateReviewForm } from './create-review-form';
 import { ReviewList } from './review-list';
-import { useTrackRecentlyViewed } from './track-recently-viewed';
 
 type Props = { bookId: string };
 

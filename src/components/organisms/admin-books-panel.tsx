@@ -26,8 +26,8 @@ import {
   PageLoader,
   Textarea,
 } from '@/components/atoms';
-import { useSaveBookMutation } from '@/lib/book/use-save-book-mutation';
-import { useDeleteBookMutation } from '@/lib/book/use-delete-book-mutation';
+import { useSaveBookMutation } from '@/lib/book';
+import { useDeleteBookMutation } from '@/lib/book';
 
 const schema = z.object({
   title: z.string().min(1),

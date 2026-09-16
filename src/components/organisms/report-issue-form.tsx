@@ -19,7 +19,7 @@ import {
   SelectValue,
   Textarea,
 } from '@/components/atoms';
-import { useCreateIssueMutation } from '@/lib/report/use-create-issue-mutation';
+import { useCreateIssueMutation } from '@/lib/report';
 
 const schema = z.object({
   type: z.enum(ISSUE_TYPES),

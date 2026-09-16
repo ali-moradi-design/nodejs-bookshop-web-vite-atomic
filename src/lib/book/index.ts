@@ -21,3 +21,4 @@ export { useBookSearchQuery } from './use-book-search-query';
 export { readRecentlyViewed, pushRecentlyViewed, type RecentBookSnapshot } from './recently-viewed';
 export { useSaveBookMutation } from './use-save-book-mutation';
 export { useDeleteBookMutation } from './use-delete-book-mutation';
+export { useTrackRecentlyViewed } from './use-track-recently-viewed';

@@ -1,5 +1,5 @@
 import { API_V1, API_URL } from '@/lib/config';
-import { ApiError, type ApiErrorBody, type QueryParams } from '@/lib/api/types';
+import { ApiError, type ApiErrorBody, type QueryParams } from './types';
 
 type HttpMethod = 'GET' | 'POST' | 'PATCH' | 'PUT' | 'DELETE';
 

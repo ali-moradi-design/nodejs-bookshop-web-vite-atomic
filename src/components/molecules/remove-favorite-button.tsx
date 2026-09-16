@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/atoms';
-import { useRemoveFavoriteMutation } from '@/lib/favorite/use-remove-favorite-mutation';
+import { useRemoveFavoriteMutation } from '@/lib/favorite';
 
 type Props = { bookId: string };
 

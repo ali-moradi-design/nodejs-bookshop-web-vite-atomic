@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { reportKeys, fetchIssues } from '@/lib/report/report-api';
+import { reportKeys, fetchIssues } from './report-api';
 
 export function useIssuesQuery() {
   return useQuery({

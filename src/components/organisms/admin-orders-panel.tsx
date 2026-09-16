@@ -16,7 +16,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/atoms';
-import { useUpdateOrderStatusMutation } from '@/lib/order/use-update-order-status-mutation';
+import { useUpdateOrderStatusMutation } from '@/lib/order';
 
 export function AdminOrdersPanel() {
   const { t } = useTranslation();

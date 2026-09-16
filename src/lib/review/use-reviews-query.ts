@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-import { reviewKeys, fetchReviews } from '@/lib/review/review-api';
-import type { Review, ReviewListParams } from '@/lib/review/types';
+import { reviewKeys, fetchReviews } from './review-api';
+import type { Review, ReviewListParams } from './types';
 
 type Options = {
   enabled?: boolean;

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useFavoritesQuery } from '@/lib/favorite';
 import { Button } from '@/components/atoms';
 import { cn } from '@/lib/utils';
-import { useToggleFavoriteMutation } from '@/lib/favorite/use-toggle-favorite-mutation';
+import { useToggleFavoriteMutation } from '@/lib/favorite';
 
 type Props = {
   bookId: string;

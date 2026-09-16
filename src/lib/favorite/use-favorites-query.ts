@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { favoriteKeys, fetchFavorites } from '@/lib/favorite/favorite-api';
+import { favoriteKeys, fetchFavorites } from './favorite-api';
 
 type Options = {
   enabled?: boolean;

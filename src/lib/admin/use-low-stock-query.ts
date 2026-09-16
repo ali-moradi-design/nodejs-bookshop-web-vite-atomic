@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { adminKeys, fetchLowStock } from '@/lib/admin/admin-api';
+import { adminKeys, fetchLowStock } from './admin-api';
 
 export function useLowStockQuery(threshold = 5) {
   return useQuery({

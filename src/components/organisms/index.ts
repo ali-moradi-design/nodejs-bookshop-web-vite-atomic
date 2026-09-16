@@ -19,7 +19,6 @@ export { ProfileForm } from './profile-form';
 export { CreateReviewForm } from './create-review-form';
 export { ReviewList } from './review-list';
 export { ReportIssueForm } from './report-issue-form';
-export { useTrackRecentlyViewed } from './track-recently-viewed';
 export { AdminBooksPanel } from './admin-books-panel';
 export { AdminDiscountsPanel } from './admin-discounts-panel';
 export { AdminOrdersPanel } from './admin-orders-panel';

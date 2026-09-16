@@ -1,7 +1,7 @@
 import { apiDelete, apiGet, apiPatch, apiPost } from '@/lib/api';
 import type { ApiData } from '@/lib/api';
 import type { Order } from '@/lib/order';
-import type { Cart, CheckoutInput } from '@/lib/cart/types';
+import type { Cart, CheckoutInput } from './types';
 
 export const cartKeys = {
   all: ['cart'] as const,

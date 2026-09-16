@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { reportKeys, fetchOrdersByStatus } from '@/lib/report/report-api';
+import { reportKeys, fetchOrdersByStatus } from './report-api';
 
 export function useOrdersByStatusQuery() {
   return useQuery({

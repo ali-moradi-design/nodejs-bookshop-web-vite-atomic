@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { discountKeys, fetchDiscounts } from '@/lib/discount/discount-api';
+import { discountKeys, fetchDiscounts } from './discount-api';
 
 export function useDiscountsQuery() {
   return useQuery({

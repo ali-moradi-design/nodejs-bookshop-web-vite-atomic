@@ -5,8 +5,8 @@ import { getRoleNames, useUsersQuery, type User } from '@/lib/user';
 import { DataTable } from '@/components/molecules';
 import { ApiError } from '@/lib/api';
 import { Alert, Badge, Button, PageLoader } from '@/components/atoms';
-import { useToggleUserActiveMutation } from '@/lib/user/use-toggle-user-active-mutation';
-import { useDeleteUserMutation } from '@/lib/user/use-delete-user-mutation';
+import { useToggleUserActiveMutation } from '@/lib/user';
+import { useDeleteUserMutation } from '@/lib/user';
 
 export function AdminUsersPanel() {
   const { t } = useTranslation();

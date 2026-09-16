@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/atoms';
-import { usePayOrderMutation } from '@/lib/order/use-pay-order-mutation';
+import { usePayOrderMutation } from '@/lib/order';
 
 type Props = {
   orderId: string;

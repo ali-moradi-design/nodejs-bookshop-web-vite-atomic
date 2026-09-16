@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { adminKeys, fetchRecentOrders } from '@/lib/admin/admin-api';
+import { adminKeys, fetchRecentOrders } from './admin-api';
 
 export function useRecentOrdersQuery(limit = 10) {
   return useQuery({

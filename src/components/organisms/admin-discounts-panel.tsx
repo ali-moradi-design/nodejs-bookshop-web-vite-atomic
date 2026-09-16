@@ -27,8 +27,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/atoms';
-import { useSaveDiscountMutation } from '@/lib/discount/use-save-discount-mutation';
-import { useDeleteDiscountMutation } from '@/lib/discount/use-delete-discount-mutation';
+import { useSaveDiscountMutation } from '@/lib/discount';
+import { useDeleteDiscountMutation } from '@/lib/discount';
 
 const schema = z.object({
   code: z.string().min(1),

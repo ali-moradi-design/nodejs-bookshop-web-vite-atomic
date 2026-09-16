@@ -1,6 +1,6 @@
 import { apiDelete, apiGet, apiPatch, apiPost } from '@/lib/api';
 import type { ApiData, ApiMessage } from '@/lib/api';
-import type { CreateRoleInput, Role, UpdateRoleInput } from '@/lib/role/types';
+import type { CreateRoleInput, Role, UpdateRoleInput } from './types';
 
 export const roleKeys = {
   all: ['roles'] as const,

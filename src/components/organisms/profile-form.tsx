@@ -5,7 +5,7 @@ import type { Resolver } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { getRoleNames, type User } from '@/lib/user';
 import { Button, Card, CardContent, CardHeader, CardTitle, Input, Label } from '@/components/atoms';
-import { useUpdateProfileMutation } from '@/lib/user/use-update-profile-mutation';
+import { useUpdateProfileMutation } from '@/lib/user';
 
 const schema = z.object({
   name: z.string().min(2).max(100),

@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { permissionKeys, fetchPermissions } from '@/lib/permission/permission-api';
+import { permissionKeys, fetchPermissions } from './permission-api';
 
 export function usePermissionsQuery() {
   return useQuery({

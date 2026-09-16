@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import type { BookListParams } from '@/lib/book';
-import { BOOK_PRICE_MAX, BOOK_PRICE_MIN } from '@/lib/book';
+import type { BookListParams } from './types';
+import { BOOK_PRICE_MAX, BOOK_PRICE_MIN } from './categories';
 import {
   buildParams,
   DEFAULT_ORDER,
@@ -11,13 +11,8 @@ import {
   type FilterParamKey,
 } from './parse-book-filters';
 
-export type { BookFiltersDraft } from '@/lib/book/parse-book-filters';
-export {
-  draftFromSearchParams,
-  buildParams,
-  parseSort,
-  parseOrder,
-} from '@/lib/book/parse-book-filters';
+export type { BookFiltersDraft } from './parse-book-filters';
+export { draftFromSearchParams, buildParams, parseSort, parseOrder } from './parse-book-filters';
 
 export function useBookFilters(limit = 12) {
   const [searchParams, setSearchParams] = useSearchParams();

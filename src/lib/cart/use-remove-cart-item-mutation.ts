@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
-import { cartKeys, removeCartItem } from '@/lib/cart';
+import { cartKeys, removeCartItem } from './cart-api';
 import { ApiError } from '@/lib/api';
 
 export function useRemoveCartItemMutation(bookId: string) {

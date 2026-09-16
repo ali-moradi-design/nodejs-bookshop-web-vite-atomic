@@ -6,8 +6,8 @@ import { useTranslation } from 'react-i18next';
 import type { Review } from '@/lib/review';
 import { zInt } from '@/lib/utils';
 import { Button, Label, Textarea } from '@/components/atoms';
-import { useCreateReviewMutation } from '@/lib/review/use-create-review-mutation';
-import { useUpdateReviewMutation } from '@/lib/review/use-update-review-mutation';
+import { useCreateReviewMutation } from '@/lib/review';
+import { useUpdateReviewMutation } from '@/lib/review';
 import { LoveRating } from '@/components/molecules/love-rating';
 
 const reviewSchema = z.object({

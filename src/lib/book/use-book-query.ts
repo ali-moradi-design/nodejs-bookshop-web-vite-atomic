@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { bookKeys, fetchBook } from '@/lib/book/book-api';
+import { bookKeys, fetchBook } from './book-api';
 
 type Options = {
   enabled?: boolean;

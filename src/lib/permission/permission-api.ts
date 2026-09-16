@@ -1,10 +1,6 @@
 import { apiDelete, apiGet, apiPatch, apiPost } from '@/lib/api';
 import type { ApiData, ApiMessage } from '@/lib/api';
-import type {
-  CreatePermissionInput,
-  Permission,
-  UpdatePermissionInput,
-} from '@/lib/permission/types';
+import type { CreatePermissionInput, Permission, UpdatePermissionInput } from './types';
 
 export const permissionKeys = {
   all: ['permissions'] as const,

@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { isAdminUser } from '@/lib/user';
 import { Alert, PageLoader } from '@/components/atoms';
-import { useAuthStore } from '@/lib/auth/auth-store';
+import { useAuthStore } from '@/lib/auth';
 
 type Props = {
   children: React.ReactNode;

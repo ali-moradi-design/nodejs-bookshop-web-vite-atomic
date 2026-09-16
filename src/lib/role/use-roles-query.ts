@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { roleKeys, fetchRoles } from '@/lib/role/role-api';
+import { roleKeys, fetchRoles } from './role-api';
 
 export function useRolesQuery() {
   return useQuery({

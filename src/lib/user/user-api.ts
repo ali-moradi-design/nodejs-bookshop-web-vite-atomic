@@ -1,6 +1,6 @@
 import { apiDelete, apiGet, apiPatch, apiPost } from '@/lib/api';
 import type { ApiData, ApiMessage } from '@/lib/api';
-import type { AuthResponse, CreateUserInput, UpdateUserInput, User } from '@/lib/user/types';
+import type { AuthResponse, CreateUserInput, UpdateUserInput, User } from './types';
 
 export const userKeys = {
   all: ['users'] as const,

@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { cartKeys, fetchCart } from '@/lib/cart/cart-api';
+import { cartKeys, fetchCart } from './cart-api';
 
 type Options = {
   enabled?: boolean;

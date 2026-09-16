@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import type { Resolver } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { Button, Card, CardContent, CardHeader, CardTitle, Input, Label } from '@/components/atoms';
-import { useCheckoutMutation, type CheckoutFormValues } from '@/lib/cart/use-checkout-mutation';
+import { useCheckoutMutation, type CheckoutFormValues } from '@/lib/cart';
 
 const schema = z.object({
   fullName: z.string().min(2),

@@ -1,6 +1,6 @@
 import { apiDelete, apiGet, apiPatch, apiPost, apiUpload } from '@/lib/api';
 import type { ApiData, ApiMessage, ApiPaginated } from '@/lib/api';
-import type { Book, BookListParams, CreateBookInput, UpdateBookInput } from '@/lib/book/types';
+import type { Book, BookListParams, CreateBookInput, UpdateBookInput } from './types';
 
 export const bookKeys = {
   all: ['books'] as const,

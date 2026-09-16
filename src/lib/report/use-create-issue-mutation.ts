@@ -1,7 +1,8 @@
 import { useMutation } from '@tanstack/react-query';
 import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
-import { createIssue, type CreateIssueInput } from '@/lib/report';
+import { createIssue } from './report-api';
+import type { CreateIssueInput } from './types';
 import { ApiError } from '@/lib/api';
 
 type Options = {

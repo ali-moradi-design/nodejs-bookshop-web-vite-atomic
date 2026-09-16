@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import type { useBookFilters } from '@/lib/book/use-book-filters';
+import type { useBookFilters } from '@/lib/book';
 
 type Filters = ReturnType<typeof useBookFilters>;
 

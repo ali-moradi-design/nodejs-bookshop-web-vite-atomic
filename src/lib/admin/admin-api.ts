@@ -2,7 +2,7 @@ import { apiGet } from '@/lib/api';
 import type { ApiData } from '@/lib/api';
 import type { Book } from '@/lib/book';
 import type { Order } from '@/lib/order';
-import type { DashboardSummary } from '@/lib/admin/types';
+import type { DashboardSummary } from './types';
 
 export const adminKeys = {
   all: ['admin'] as const,

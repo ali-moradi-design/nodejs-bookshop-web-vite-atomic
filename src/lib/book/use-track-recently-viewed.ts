@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import type { Book } from '@/lib/book';
-import { pushRecentlyViewed } from '@/lib/book/recently-viewed';
+import type { Book } from './types';
+import { pushRecentlyViewed } from './recently-viewed';
 
 /** Call on book-detail mount to record a view. */
 export function useTrackRecentlyViewed(book: Book | null | undefined) {

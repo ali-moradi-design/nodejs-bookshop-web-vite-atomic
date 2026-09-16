@@ -1,6 +1,6 @@
 import { apiDelete, apiGet, apiPatch, apiPost } from '@/lib/api';
 import type { ApiData, ApiMessage } from '@/lib/api';
-import type { CreateDiscountInput, Discount, UpdateDiscountInput } from '@/lib/discount/types';
+import type { CreateDiscountInput, Discount, UpdateDiscountInput } from './types';
 
 export const discountKeys = {
   all: ['discounts'] as const,

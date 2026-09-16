@@ -2,7 +2,8 @@ import { useMutation } from '@tanstack/react-query';
 import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { checkoutCart, type CheckoutInput } from '@/lib/cart';
+import { checkoutCart } from './cart-api';
+import type { CheckoutInput } from './types';
 import { ApiError } from '@/lib/api';
 
 export type CheckoutFormValues = {

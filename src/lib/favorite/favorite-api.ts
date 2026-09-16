@@ -1,6 +1,6 @@
 import { apiDelete, apiGet, apiPost } from '@/lib/api';
 import type { ApiData, ApiMessage } from '@/lib/api';
-import type { Favorite } from '@/lib/favorite/types';
+import type { Favorite } from './types';
 
 export const favoriteKeys = {
   all: ['favorites'] as const,

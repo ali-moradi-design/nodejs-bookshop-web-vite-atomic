@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Button, Input } from '@/components/atoms';
-import { useUpdateCartItemMutation } from '@/lib/cart/use-update-cart-item-mutation';
-import { useRemoveCartItemMutation } from '@/lib/cart/use-remove-cart-item-mutation';
+import { useUpdateCartItemMutation } from '@/lib/cart';
+import { useRemoveCartItemMutation } from '@/lib/cart';
 
 type Props = {
   bookId: string;

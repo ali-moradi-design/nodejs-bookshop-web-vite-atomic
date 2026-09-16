@@ -4,7 +4,7 @@ import { Search } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import type { Book } from '@/lib/book';
 import { useDebouncedValue, usePreferences } from '@/lib/hooks';
-import { useBookSearchQuery } from '@/lib/book/use-book-search-query';
+import { useBookSearchQuery } from '@/lib/book';
 import { formatMoney, resolveImageUrl, cn } from '@/lib/utils';
 import {
   Button,

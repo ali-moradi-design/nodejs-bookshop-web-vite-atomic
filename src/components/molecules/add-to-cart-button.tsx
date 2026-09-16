@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { ShoppingCart } from 'lucide-react';
 import { Button, Icon } from '@/components/atoms';
-import { useAddToCartMutation } from '@/lib/cart/use-add-to-cart-mutation';
+import { useAddToCartMutation } from '@/lib/cart';
 
 type Props = {
   bookId: string;

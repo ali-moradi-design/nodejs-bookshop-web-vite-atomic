@@ -1,4 +1,4 @@
-import { useBooksQuery } from '@/lib/book';
+import { useBooksQuery } from './use-books-query';
 
 type Options = {
   enabled?: boolean;

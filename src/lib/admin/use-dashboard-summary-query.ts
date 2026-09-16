@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { adminKeys, fetchDashboardSummary } from '@/lib/admin/admin-api';
+import { adminKeys, fetchDashboardSummary } from './admin-api';
 
 export function useDashboardSummaryQuery() {
   return useQuery({

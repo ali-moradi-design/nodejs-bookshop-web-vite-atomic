@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { orderKeys, fetchOrders } from '@/lib/order/order-api';
+import { orderKeys, fetchOrders } from './order-api';
 
 export function useOrdersQuery() {
   return useQuery({

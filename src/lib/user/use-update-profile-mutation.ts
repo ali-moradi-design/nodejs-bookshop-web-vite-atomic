@@ -1,7 +1,8 @@
 import { useMutation } from '@tanstack/react-query';
 import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
-import { updateUser, type User } from '@/lib/user';
+import { updateUser } from './user-api';
+import type { User } from './types';
 import { ApiError } from '@/lib/api';
 
 export type UpdateProfileValues = {

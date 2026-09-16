@@ -1,8 +1,8 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
-import { updateReview, reviewKeys } from '@/lib/review';
-import type { UpdateReviewInput } from '@/lib/review';
+import { updateReview, reviewKeys } from './review-api';
+import type { UpdateReviewInput } from './types';
 import { ApiError } from '@/lib/api';
 
 type Options = {

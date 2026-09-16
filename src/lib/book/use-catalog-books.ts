@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
-import { useBooksQuery, type Book } from '@/lib/book';
-import type { useBookFilters } from '@/lib/book/use-book-filters';
+import type { Book } from './types';
+import { useBooksQuery } from './use-books-query';
+import type { useBookFilters } from './use-book-filters';
 
 type Filters = ReturnType<typeof useBookFilters>;
 

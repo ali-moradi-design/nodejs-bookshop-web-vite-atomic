@@ -1,7 +1,8 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
-import { addFavorite, favoriteKeys, removeFavorite, type Favorite } from '@/lib/favorite';
+import { addFavorite, favoriteKeys, removeFavorite } from './favorite-api';
+import type { Favorite } from './types';
 import { ApiError } from '@/lib/api';
 
 export function useToggleFavoriteMutation(bookId: string, isFav: boolean) {

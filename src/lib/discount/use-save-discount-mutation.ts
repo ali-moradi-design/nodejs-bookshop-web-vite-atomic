@@ -1,12 +1,8 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
-import {
-  createDiscount,
-  updateDiscount,
-  discountKeys,
-  type CreateDiscountInput,
-} from '@/lib/discount';
+import { createDiscount, updateDiscount, discountKeys } from './discount-api';
+import type { CreateDiscountInput } from './types';
 import { ApiError } from '@/lib/api';
 
 type Options = {

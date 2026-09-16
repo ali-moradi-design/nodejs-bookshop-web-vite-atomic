@@ -1,7 +1,8 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
-import { reportKeys, updateIssue, type IssueStatus } from '@/lib/report';
+import { reportKeys, updateIssue } from './report-api';
+import type { IssueStatus } from './types';
 import { ApiError } from '@/lib/api';
 
 export function useUpdateIssueStatusMutation() {

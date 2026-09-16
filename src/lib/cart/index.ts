@@ -13,4 +13,4 @@ export { useAddToCartMutation } from './use-add-to-cart-mutation';
 export { useUpdateCartItemMutation } from './use-update-cart-item-mutation';
 export { useRemoveCartItemMutation } from './use-remove-cart-item-mutation';
 export { useClearCartMutation } from './use-clear-cart-mutation';
-export { useCheckoutMutation } from './use-checkout-mutation';
+export { useCheckoutMutation, type CheckoutFormValues } from './use-checkout-mutation';

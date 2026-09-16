@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, useReducedMotion } from 'motion/react';
-import type { Book } from '@/lib/book/types';
+import type { Book } from '@/lib/book';
 import { PriceTag } from './price-tag';
 import { Badge, Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/atoms';
 import { usePreferences } from '@/lib/hooks';
