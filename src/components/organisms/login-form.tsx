@@ -7,17 +7,9 @@ import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
 import { isAdminUser } from '@/lib/user';
 import { ApiError } from '@/lib/api';
-import {
-  Alert,
-  Button,
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  Input,
-  Label,
-} from '@/components/atoms';
-import { useAuthStore } from '@/lib/auth/auth-store';
+import { Alert, Button, Card, CardContent, CardHeader, CardTitle, Input } from '@/components/atoms';
+import { FormField } from '@/components/molecules';
+import { useAuthStore } from '@/lib/auth';
 
 const schema = z.object({
   email: z.string().email(),
@@ -52,14 +44,12 @@ export function LoginForm() {
       </CardHeader>
       <CardContent>
         <form className="space-y-4" onSubmit={onSubmit}>
-          <div className="space-y-1">
-            <Label>{t('auth.email')}</Label>
+          <FormField label={t('auth.email')}>
             <Input type="email" autoComplete="email" {...form.register('email')} />
-          </div>
-          <div className="space-y-1">
-            <Label>{t('auth.password')}</Label>
+          </FormField>
+          <FormField label={t('auth.password')}>
             <Input type="password" autoComplete="current-password" {...form.register('password')} />
-          </div>
+          </FormField>
           <Button
             className="w-full text-white"
             type="submit"

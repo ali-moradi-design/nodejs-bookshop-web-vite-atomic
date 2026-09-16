@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next';
 import { BOOK_CATEGORIES, type BookListParams } from '@/lib/book';
 import {
   Button,
-  Input,
   Label,
   Select,
   SelectContent,
@@ -10,8 +9,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/atoms';
-import type { BookFiltersState } from '@/lib/book/use-book-filters';
-import { PriceRangeFilter } from '@/components/molecules/price-range-filter';
+import type { BookFiltersState } from '@/lib/book';
+import { FormField, PriceRangeFilter, SearchBox } from '@/components/molecules';
 
 const ALL_CATEGORY = '__all__';
 
@@ -53,18 +52,15 @@ export function BookFilters(props: Props) {
   return (
     <div className="space-y-4 rounded-xl border bg-card p-4">
       <div className="grid gap-3 md:grid-cols-5">
-        <div className="space-y-1 md:col-span-2">
-          <Label htmlFor="catalog-q">{t('catalog.query')}</Label>
-          <Input
+        <FormField label={t('catalog.query')} htmlFor="catalog-q" className="md:col-span-2">
+          <SearchBox
             id="catalog-q"
             value={q}
-            onChange={(e) => setQ(e.target.value)}
+            onChange={setQ}
+            onSubmit={applyFilters}
             placeholder={t('catalog.searchPlaceholder')}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter') applyFilters();
-            }}
           />
-        </div>
+        </FormField>
 
         <div className="space-y-1">
           <Label>{t('catalog.category')}</Label>

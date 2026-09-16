@@ -19,3 +19,6 @@ export { PriceRangeFilter } from './price-range-filter';
 export { LocaleSwitcher } from './locale-switcher';
 export { ThemeSwitcher } from './theme-switcher';
 export { PayOrderButton } from './pay-order-button';
+export { FormField } from './form-field';
+export { SearchBox } from './search-box';
+export { PriceTag } from './price-tag';

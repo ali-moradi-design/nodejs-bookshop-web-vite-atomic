@@ -6,8 +6,9 @@ import type { Resolver } from 'react-hook-form';
 import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
 import { ApiError } from '@/lib/api';
-import { Button, Card, CardContent, CardHeader, CardTitle, Input, Label } from '@/components/atoms';
-import { useAuthStore } from '@/lib/auth/auth-store';
+import { Button, Card, CardContent, CardHeader, CardTitle, Input } from '@/components/atoms';
+import { FormField } from '@/components/molecules';
+import { useAuthStore } from '@/lib/auth';
 
 const schema = z.object({
   name: z.string().min(2).max(100),
@@ -43,18 +44,15 @@ export function RegisterForm() {
       </CardHeader>
       <CardContent>
         <form className="space-y-4" onSubmit={onSubmit}>
-          <div className="space-y-1">
-            <Label>{t('auth.name')}</Label>
+          <FormField label={t('auth.name')}>
             <Input {...form.register('name')} />
-          </div>
-          <div className="space-y-1">
-            <Label>{t('auth.email')}</Label>
+          </FormField>
+          <FormField label={t('auth.email')}>
             <Input type="email" {...form.register('email')} />
-          </div>
-          <div className="space-y-1">
-            <Label>{t('auth.password')}</Label>
+          </FormField>
+          <FormField label={t('auth.password')}>
             <Input type="password" {...form.register('password')} />
-          </div>
+          </FormField>
           <Button
             className="w-full text-white"
             type="submit"

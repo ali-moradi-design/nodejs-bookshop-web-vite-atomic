@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, useReducedMotion } from 'motion/react';
 import type { Book } from '@/lib/book/types';
-import { formatMoney } from '@/lib/utils';
+import { PriceTag } from './price-tag';
 import { Badge, Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/atoms';
 import { usePreferences } from '@/lib/hooks';
 import { BookCoverImage } from '@/components/molecules/book-cover-image';
@@ -88,7 +88,7 @@ export function BookCard({ book, actions }: BookCardProps) {
             <p className="line-clamp-2 text-xs text-muted-foreground">{book.description}</p>
           </CardContent>
           <CardFooter className="flex items-center justify-between p-4 pt-0">
-            <span className="font-semibold">{formatMoney(book.price, book.currency, locale)}</span>
+            <PriceTag amount={book.price} currency={book.currency} locale={locale} />
             <span className="text-xs text-muted-foreground">
               {book.stock > 0 ? `${t('book.stock')}: ${book.stock}` : t('book.outOfStock')}
             </span>
