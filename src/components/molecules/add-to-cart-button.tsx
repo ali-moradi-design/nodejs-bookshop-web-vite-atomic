@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { ShoppingCart } from 'lucide-react';
-import { Button } from '@/components/atoms';
+import { Button, Icon } from '@/components/atoms';
 import { useAddToCartMutation } from '@/lib/cart/use-add-to-cart-mutation';
 
 type Props = {
@@ -15,7 +15,7 @@ export function AddToCartButton({ bookId, disabled, quantity = 1 }: Props) {
 
   return (
     <Button onClick={() => addToCart.mutate()} disabled={disabled || addToCart.isPending}>
-      <ShoppingCart /> {t('book.addToCart')}
+      <Icon icon={ShoppingCart} /> {t('book.addToCart')}
     </Button>
   );
 }

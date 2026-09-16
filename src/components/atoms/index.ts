@@ -52,3 +52,4 @@ export {
   SheetTitle,
   SheetDescription,
 } from './sheet';
+export { Icon, type IconProps } from './icon';

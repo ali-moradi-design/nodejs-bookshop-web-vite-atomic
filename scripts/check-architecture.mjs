@@ -75,7 +75,16 @@ function checkSpec(importerRel, spec) {
 
   const fromLayer = uiLayerOf(importerRel);
   const toLayer = uiLayerOf(importedRel.replace(/\.(ts|tsx)$/, ''));
-  if (!fromLayer || !toLayer) return;
+  if (!fromLayer || !toLayer) {
+
+  // Atoms may only touch lib/utils (e.g. cn) — no domain hooks/api
+  if (fromLayer === 'atoms' && importedRel.startsWith('lib/') && !importedRel.startsWith('lib/utils')) {
+    errors.push(
+      `${importerRel}: atoms must not import domain lib via '${spec}' (only @/lib/utils)`,
+    );
+  }
+    return;
+  }
 
   if (UI_RANK[toLayer] > UI_RANK[fromLayer]) {
     errors.push(
