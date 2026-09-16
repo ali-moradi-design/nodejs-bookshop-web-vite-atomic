@@ -86,6 +86,15 @@ function checkSpec(importerRel, spec) {
     return;
   }
 
+  
+  if (fromLayer === 'templates' && importedRel && importedRel.startsWith('lib/')) {
+    const domain = importedRel.split('/')[1];
+    const allowed = new Set(['utils']);
+    if (!allowed.has(domain)) {
+      errors.push(`${importerRel}: templates should only use @/lib/utils (got '${spec}')`);
+    }
+  }
+
   if (UI_RANK[toLayer] > UI_RANK[fromLayer]) {
     errors.push(
       `${importerRel}: upward import of ${toLayer} via '${spec}' (from ${fromLayer})`,
