@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { ActiveFilterChips } from '@/components/molecules';
-import { BookFilters } from '@/components/organisms';
+import { CatalogFilters } from '@/components/organisms';
 import { useBookFilters, useCatalogBooks } from '@/lib/book';
 import { BookGrid, BookGridSkeleton } from '@/components/organisms';
 import { Alert, Button } from '@/components/atoms';
@@ -17,7 +17,7 @@ export function CatalogPage() {
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-bold">{t('catalog.title')}</h1>
-      <BookFilters {...filters} />
+      <CatalogFilters {...filters} />
       <ActiveFilterChips filters={filters} />
 
       {isLoading && filters.page <= 1 ? <BookGridSkeleton count={12} /> : null}

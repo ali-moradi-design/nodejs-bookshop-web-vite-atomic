@@ -2,12 +2,14 @@ import { Link } from 'react-router-dom';
 import { User } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useAuthStore } from '@/lib/auth';
-import { ThemeSwitcher } from '@/components/molecules';
-import { LocaleSwitcher } from '@/components/molecules';
-import { HeaderBookSearch } from '@/components/organisms';
-import { CartBadgeLink } from '@/components/molecules';
-import { Button } from '@/components/atoms';
-import { isAdminUser } from '@/lib/user';
+import {
+  ThemeSwitcher,
+  LocaleSwitcher,
+  CartBadgeLink,
+  StorefrontNav,
+} from '@/components/molecules';
+import { Button, Icon } from '@/components/atoms';
+import { HeaderBookSearch } from './header-book-search';
 
 export function Header() {
   const { t } = useTranslation();
@@ -28,21 +30,7 @@ export function Header() {
             />
             <span className="text-base sm:text-lg">{t('common.appName')}</span>
           </Link>
-          <nav className="hidden items-center gap-4 text-sm md:flex">
-            <Link to="/catalog" className="text-muted-foreground hover:text-foreground">
-              {t('nav.catalog')}
-            </Link>
-            {user ? (
-              <Link to="/panel" className="text-muted-foreground hover:text-foreground">
-                {t('nav.account')}
-              </Link>
-            ) : null}
-            {isAdminUser(user) ? (
-              <Link to="/admin" className="text-muted-foreground hover:text-foreground">
-                {t('nav.admin')}
-              </Link>
-            ) : null}
-          </nav>
+          <StorefrontNav />
         </div>
         <div className="flex items-center gap-2">
           <HeaderBookSearch />
@@ -53,7 +41,7 @@ export function Header() {
             <>
               <Button variant="ghost" size="icon" asChild>
                 <Link to="/panel" aria-label={t('nav.account')}>
-                  <User />
+                  <Icon icon={User} />
                 </Link>
               </Button>
               <Button variant="outline" size="sm" onClick={() => void logout()}>

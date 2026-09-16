@@ -1,18 +1,22 @@
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useBookQuery } from '@/lib/book';
-import { BookCoverImage, BookDetailSkeleton } from '@/components/molecules';
 import { useReviewsQuery } from '@/lib/review';
 import { useAuthStore } from '@/lib/auth';
-import { AddToCartButton } from '@/components/molecules';
-import { FavoriteToggleButton } from '@/components/molecules';
-import { CreateReviewForm, ReviewList } from '@/components/organisms';
-import { LoveRating } from '@/components/molecules';
-import { useTrackRecentlyViewed } from '@/components/organisms';
-import { formatMoney } from '@/lib/utils';
 import { usePreferences, usePageTitle } from '@/lib/hooks';
-import { Alert, Badge, Card, CardContent, CardHeader, CardTitle } from '@/components/atoms';
 import { ApiError } from '@/lib/api';
+import { Alert, Badge, Card, CardContent, CardHeader, CardTitle } from '@/components/atoms';
+import {
+  BookCoverImage,
+  BookDetailSkeleton,
+  AddToCartButton,
+  FavoriteToggleButton,
+  LoveRating,
+  PriceTag,
+} from '@/components/molecules';
+import { CreateReviewForm } from './create-review-form';
+import { ReviewList } from './review-list';
+import { useTrackRecentlyViewed } from './track-recently-viewed';
 
 type Props = { bookId: string };
 
@@ -84,7 +88,9 @@ export function BookDetailPanel({ bookId }: Props) {
               </span>
             </div>
           ) : null}
-          <p className="text-2xl font-semibold">{formatMoney(book.price, book.currency, locale)}</p>
+          <p className="text-2xl font-semibold">
+            <PriceTag amount={book.price} currency={book.currency} locale={locale} />
+          </p>
           <p className="text-sm text-muted-foreground">
             {book.stock > 0 ? `${t('book.stock')}: ${book.stock}` : t('book.outOfStock')}
           </p>

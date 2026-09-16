@@ -8,6 +8,8 @@ export { KpiCards, type KpiItem } from './kpi-cards';
 export { AdminCharts } from './admin-charts';
 export { RecentlyViewedSection } from './recently-viewed-section';
 export { BookFilters } from './book-filters';
+/** @deprecated Prefer CatalogFilters alias for catalog screens */
+export { BookFilters as CatalogFilters } from './book-filters';
 export { HeaderBookSearch } from './header-book-search';
 export { LoginForm } from './login-form';
 export { RegisterForm } from './register-form';

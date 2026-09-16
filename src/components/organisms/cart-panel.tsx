@@ -1,11 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useCartQuery } from '@/lib/cart';
-import { BookCoverImage } from '@/components/molecules';
 import { useCartBooksQueries } from '@/lib/book';
 import { useAuthStore } from '@/lib/auth';
-import { CartLineControls, ClearCartButton } from '@/components/molecules';
-import { formatMoney } from '@/lib/utils';
 import { usePreferences, usePageTitle } from '@/lib/hooks';
 import { ApiError } from '@/lib/api';
 import {
@@ -20,7 +17,13 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/atoms';
-import { EmptyState } from '@/components/molecules';
+import {
+  BookCoverImage,
+  CartLineControls,
+  ClearCartButton,
+  EmptyState,
+  PriceTag,
+} from '@/components/molecules';
 
 export function CartPanel() {
   const { t } = useTranslation();
@@ -130,7 +133,7 @@ export function CartPanel() {
                   <CartLineControls bookId={item.bookId} quantity={item.quantity} />
                 </TableCell>
                 <TableCell className="font-medium tabular-nums">
-                  {formatMoney(line, book?.currency || 'USD', locale)}
+                  <PriceTag amount={line} currency={book?.currency || 'USD'} locale={locale} />
                 </TableCell>
               </TableRow>
             ))}
@@ -139,7 +142,7 @@ export function CartPanel() {
       </div>
       <div className="flex items-center justify-between rounded-xl border bg-card p-4">
         <div className="text-lg font-semibold">
-          {t('cart.subtotal')}: {formatMoney(subtotal, 'USD', locale)}
+          {t('cart.subtotal')}: <PriceTag amount={subtotal} currency={'USD'} locale={locale} />
         </div>
         <Button asChild>
           <Link to="/checkout">{t('cart.checkout')}</Link>

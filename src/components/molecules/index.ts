@@ -22,3 +22,4 @@ export { PayOrderButton } from './pay-order-button';
 export { FormField } from './form-field';
 export { SearchBox } from './search-box';
 export { PriceTag } from './price-tag';
+export { StorefrontNav } from './storefront-nav';
