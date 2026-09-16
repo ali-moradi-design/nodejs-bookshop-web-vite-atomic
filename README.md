@@ -17,7 +17,7 @@
 - i18next (`en` + `fa`, RTL) · Vazirmatn / Inter
 - 3 named themes (Default, Desert, Rosy) × light/dark
 - Zustand (theme/locale/auth prefs)
-- Vitest · Playwright · Storybook · husky · lint-staged · rollup-plugin-visualizer
+- Vitest · Playwright · Storybook (Atoms/_, Molecules/_) · husky · lint-staged · rollup-plugin-visualizer
 
 ## Prerequisites
 

@@ -67,3 +67,30 @@ Fails on upward UI imports and leftover FSD paths (`entities/`, `features/`, `wi
 
 - `@/*` → `src/*` (Vite + TypeScript)
 - Prefer `@/components/*`, `@/lib/*`, `@/app/*`
+
+## Inventory (high level)
+
+### Atoms
+
+Button, Input, Label, Textarea, Card, Badge, Skeleton, Separator, Select, Dialog,
+DropdownMenu, Table, Spinner/PageLoader, Alert, Slider, Sheet, Icon
+
+### Molecules
+
+BookCard (+ skeletons/cover), cart controls, favorites toggles, LoveRating,
+FormField, SearchBox, PriceTag, StorefrontNav, Locale/Theme switchers, DataTable,
+EmptyState, BeamsBackground, KokonutButton, filter chips / price range
+
+### Organisms
+
+Header, Footer, CartPanel, BookGrid, BookDetailPanel, HomeHero, CatalogFilters,
+HeaderBookSearch, auth forms, admin panels, review/checkout/profile forms
+
+### Templates
+
+StorefrontTemplate, PanelTemplate, AdminTemplate, AuthTemplate
+
+### Lib domains
+
+`api`, `config`, `hooks`, `i18n`, `utils`, `auth`, `book`, `cart`, `order`,
+`favorite`, `review`, `discount`, `report`, `admin`, `user`, `role`, `permission`
