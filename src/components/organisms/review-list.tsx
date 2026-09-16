@@ -3,7 +3,7 @@ import type { Review } from '@/lib/review';
 import { formatDate } from '@/lib/utils';
 import { usePreferences } from '@/lib/hooks';
 import { EmptyState } from '@/components/molecules';
-import { LoveRating } from '@/components/molecules/love-rating';
+import { LoveRating } from '@/components/molecules';
 
 type Props = { reviews: Review[] };
 

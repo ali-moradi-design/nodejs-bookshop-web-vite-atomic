@@ -112,17 +112,20 @@ With an empty `VITE_API_URL`, browser requests go to the Vite origin and are pro
 - **User panel** (`/panel`): dashboard, profile, orders (+ pay), favorites, my reviews, issue report
 - **Admin** (`/admin`): dashboard KPIs, books CRUD + cover upload, orders status, users, roles, permissions, discounts, issue reports, analytics (lazy-loaded)
 
-## FSD layout
+## Atomic Design layout
 
 ```
 src/
-  app/          # providers, React Router, global styles
-  pages/        # FSD pages composed into routes
-  widgets/      # shells, grids, tables, KPIs
-  features/     # auth, theme/locale switchers, …
-  entities/     # book, user, cart, order, …
-  shared/       # api client, ui, i18n, config
+  app/                         # providers, React Router, global styles
+  components/atoms/            # Button, Input, Label, …
+  components/molecules/        # BookCard, FormField, SearchBox, …
+  components/organisms/        # Header, CartPanel, CatalogFilters, …
+  components/templates/        # Storefront / Panel / Admin / Auth layouts
+  components/pages/            # route screens
+  lib/                         # api, i18n, hooks, utils, domain modules
 ```
+
+See [`docs/atomic-design.md`](./docs/atomic-design.md). Run `pnpm check:architecture`.
 
 ## Kokonut UI
 

@@ -5,7 +5,7 @@ import type { Book } from '@/lib/book';
 import { PriceTag } from './price-tag';
 import { Badge, Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/atoms';
 import { usePreferences } from '@/lib/hooks';
-import { BookCoverImage } from '@/components/molecules/book-cover-image';
+import { BookCoverImage } from './book-cover-image';
 
 interface BookCardProps {
   book: Book;

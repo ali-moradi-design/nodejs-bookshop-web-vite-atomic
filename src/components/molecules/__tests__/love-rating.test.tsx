@@ -4,7 +4,7 @@ import { cleanup, render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { I18nextProvider } from 'react-i18next';
 import { i18n } from '@/lib/i18n';
-import { LoveRating } from '@/components/molecules/love-rating';
+import { LoveRating } from '../love-rating';
 
 afterEach(() => cleanup());
 

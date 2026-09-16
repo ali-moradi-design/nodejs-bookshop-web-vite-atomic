@@ -8,7 +8,7 @@ import { zInt } from '@/lib/utils';
 import { Button, Label, Textarea } from '@/components/atoms';
 import { useCreateReviewMutation } from '@/lib/review';
 import { useUpdateReviewMutation } from '@/lib/review';
-import { LoveRating } from '@/components/molecules/love-rating';
+import { LoveRating } from '@/components/molecules';
 
 const reviewSchema = z.object({
   rating: zInt.pipe(z.number().int().min(1).max(5)),

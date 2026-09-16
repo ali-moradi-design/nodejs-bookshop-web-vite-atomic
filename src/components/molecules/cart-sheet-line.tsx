@@ -3,7 +3,7 @@ import type { Book } from '@/lib/book';
 import { BookCoverImage } from '@/components/molecules';
 import { formatMoney } from '@/lib/utils';
 import { SheetClose, Skeleton } from '@/components/atoms';
-import { CartLineControls } from '@/components/molecules/cart-line-controls';
+import { CartLineControls } from './cart-line-controls';
 
 type Props = {
   bookId: string;

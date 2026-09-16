@@ -3,7 +3,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { i18n } from '@/lib/i18n';
-import { BookCard } from '@/components/molecules/book-card';
+import { BookCard } from './book-card';
 import type { Book } from '@/lib/book';
 import type { ThemeName, ColorMode } from '@/lib/config';
 

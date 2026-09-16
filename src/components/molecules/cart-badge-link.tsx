@@ -17,7 +17,7 @@ import {
   SheetClose,
   Skeleton,
 } from '@/components/atoms';
-import { CartSheetLine } from '@/components/molecules/cart-sheet-line';
+import { CartSheetLine } from './cart-sheet-line';
 
 type Props = {
   /** When false, skip cart fetch (guest). */
