@@ -1,74 +1,84 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Navigate, Outlet, Route, Routes } from 'react-router-dom';
 import { AppProviders } from '@/app/providers';
-import { StorefrontShell } from '@/widgets/storefront-shell';
-import { PanelShell } from '@/widgets/panel-shell';
-import { AdminShell } from '@/widgets/admin-shell';
-import { Header } from '@/widgets/header';
-import { Footer } from '@/widgets/footer';
-import { RequireAuth } from '@/features/auth';
-import { PageLoader } from '@/shared/ui';
+import { StorefrontTemplate } from '@/components/templates';
+import { PanelTemplate } from '@/components/templates';
+import { AdminTemplate } from '@/components/templates';
+import { Header } from '@/components/organisms';
+import { Footer } from '@/components/organisms';
+import { RequireAuth } from '@/components/organisms';
+import { PageLoader } from '@/components/atoms';
 
-const HomePage = lazy(() => import('@/pages/home').then((m) => ({ default: m.HomePage })));
-const CatalogPage = lazy(() => import('@/pages/catalog').then((m) => ({ default: m.CatalogPage })));
+const HomePage = lazy(() =>
+  import('@/components/pages/home').then((m) => ({ default: m.HomePage })),
+);
+const CatalogPage = lazy(() =>
+  import('@/components/pages/catalog').then((m) => ({ default: m.CatalogPage })),
+);
 const BookDetailPage = lazy(() =>
-  import('@/pages/book-detail').then((m) => ({ default: m.BookDetailPage })),
+  import('@/components/pages/book-detail').then((m) => ({ default: m.BookDetailPage })),
 );
-const CartPage = lazy(() => import('@/pages/cart').then((m) => ({ default: m.CartPage })));
+const CartPage = lazy(() =>
+  import('@/components/pages/cart').then((m) => ({ default: m.CartPage })),
+);
 const CheckoutPage = lazy(() =>
-  import('@/pages/checkout').then((m) => ({ default: m.CheckoutPage })),
+  import('@/components/pages/checkout').then((m) => ({ default: m.CheckoutPage })),
 );
-const LoginPage = lazy(() => import('@/pages/login').then((m) => ({ default: m.LoginPage })));
+const LoginPage = lazy(() =>
+  import('@/components/pages/login').then((m) => ({ default: m.LoginPage })),
+);
 const RegisterPage = lazy(() =>
-  import('@/pages/register').then((m) => ({ default: m.RegisterPage })),
+  import('@/components/pages/register').then((m) => ({ default: m.RegisterPage })),
 );
 const PanelDashboardPage = lazy(() =>
-  import('@/pages/panel/dashboard').then((m) => ({ default: m.PanelDashboardPage })),
+  import('@/components/pages/panel/dashboard').then((m) => ({ default: m.PanelDashboardPage })),
 );
 const ProfilePage = lazy(() =>
-  import('@/pages/panel/profile').then((m) => ({ default: m.ProfilePage })),
+  import('@/components/pages/panel/profile').then((m) => ({ default: m.ProfilePage })),
 );
 const PanelOrdersPage = lazy(() =>
-  import('@/pages/panel/orders').then((m) => ({ default: m.PanelOrdersPage })),
+  import('@/components/pages/panel/orders').then((m) => ({ default: m.PanelOrdersPage })),
 );
 const PanelOrderDetailPage = lazy(() =>
-  import('@/pages/panel/order-detail').then((m) => ({ default: m.PanelOrderDetailPage })),
+  import('@/components/pages/panel/order-detail').then((m) => ({
+    default: m.PanelOrderDetailPage,
+  })),
 );
 const FavoritesPage = lazy(() =>
-  import('@/pages/panel/favorites').then((m) => ({ default: m.FavoritesPage })),
+  import('@/components/pages/panel/favorites').then((m) => ({ default: m.FavoritesPage })),
 );
 const MyReviewsPage = lazy(() =>
-  import('@/pages/panel/reviews').then((m) => ({ default: m.MyReviewsPage })),
+  import('@/components/pages/panel/reviews').then((m) => ({ default: m.MyReviewsPage })),
 );
 const ReportIssuePage = lazy(() =>
-  import('@/pages/panel/report').then((m) => ({ default: m.ReportIssuePage })),
+  import('@/components/pages/panel/report').then((m) => ({ default: m.ReportIssuePage })),
 );
 const AdminDashboardPage = lazy(() =>
-  import('@/pages/admin/dashboard').then((m) => ({ default: m.AdminDashboardPage })),
+  import('@/components/pages/admin/dashboard').then((m) => ({ default: m.AdminDashboardPage })),
 );
 const AdminBooksPage = lazy(() =>
-  import('@/pages/admin/books').then((m) => ({ default: m.AdminBooksPage })),
+  import('@/components/pages/admin/books').then((m) => ({ default: m.AdminBooksPage })),
 );
 const AdminOrdersPage = lazy(() =>
-  import('@/pages/admin/orders').then((m) => ({ default: m.AdminOrdersPage })),
+  import('@/components/pages/admin/orders').then((m) => ({ default: m.AdminOrdersPage })),
 );
 const AdminUsersPage = lazy(() =>
-  import('@/pages/admin/users').then((m) => ({ default: m.AdminUsersPage })),
+  import('@/components/pages/admin/users').then((m) => ({ default: m.AdminUsersPage })),
 );
 const AdminRolesPage = lazy(() =>
-  import('@/pages/admin/roles').then((m) => ({ default: m.AdminRolesPage })),
+  import('@/components/pages/admin/roles').then((m) => ({ default: m.AdminRolesPage })),
 );
 const AdminPermissionsPage = lazy(() =>
-  import('@/pages/admin/permissions').then((m) => ({ default: m.AdminPermissionsPage })),
+  import('@/components/pages/admin/permissions').then((m) => ({ default: m.AdminPermissionsPage })),
 );
 const AdminDiscountsPage = lazy(() =>
-  import('@/pages/admin/discounts').then((m) => ({ default: m.AdminDiscountsPage })),
+  import('@/components/pages/admin/discounts').then((m) => ({ default: m.AdminDiscountsPage })),
 );
 const AdminReportsPage = lazy(() =>
-  import('@/pages/admin/reports').then((m) => ({ default: m.AdminReportsPage })),
+  import('@/components/pages/admin/reports').then((m) => ({ default: m.AdminReportsPage })),
 );
 const AdminAnalyticsPage = lazy(() =>
-  import('@/pages/admin/analytics').then((m) => ({ default: m.AdminAnalyticsPage })),
+  import('@/components/pages/admin/analytics').then((m) => ({ default: m.AdminAnalyticsPage })),
 );
 
 const RouteFallback = () => <PageLoader />;
@@ -76,11 +86,11 @@ const RouteFallback = () => <PageLoader />;
 const StorefrontLayout = () => (
   <div className="flex min-h-screen flex-col">
     <Header />
-    <StorefrontShell>
+    <StorefrontTemplate>
       <Suspense fallback={<RouteFallback />}>
         <Outlet />
       </Suspense>
-    </StorefrontShell>
+    </StorefrontTemplate>
     <Footer />
   </div>
 );
@@ -89,11 +99,11 @@ const PanelLayout = () => (
   <div className="flex min-h-screen flex-col">
     <Header />
     <RequireAuth>
-      <PanelShell>
+      <PanelTemplate>
         <Suspense fallback={<RouteFallback />}>
           <Outlet />
         </Suspense>
-      </PanelShell>
+      </PanelTemplate>
     </RequireAuth>
   </div>
 );
@@ -102,11 +112,11 @@ const AdminLayout = () => (
   <div className="flex min-h-screen flex-col">
     <Header />
     <RequireAuth requireAdmin>
-      <AdminShell>
+      <AdminTemplate>
         <Suspense fallback={<RouteFallback />}>
           <Outlet />
         </Suspense>
-      </AdminShell>
+      </AdminTemplate>
     </RequireAuth>
   </div>
 );

@@ -1,4 +1,4 @@
-# nodejs-bookshop-web-vite
+# nodejs-bookshop-web-vite-atomic
 
 **Vite + React + TypeScript SPA** bookstore frontend for the layered Mongo API  
 [`nodejs-bookshop-layered`](https://github.com/ali-moradi-design/nodejs-bookshop-layered).
@@ -9,8 +9,8 @@
 ## Stack
 
 - **Vite** · React 19 · TypeScript (strict) · React Router
-- Feature-Sliced Design (`src/app`, `src/pages`, `src/widgets`, `src/features`, `src/entities`, `src/shared`)
-- Architecture guide: [`docs/fsd.md`](./docs/fsd.md) · `pnpm check:fsd`
+- Atomic Design (`src/app`, `src/components/{atoms,molecules,organisms,templates,pages}`, `src/lib`)
+- Architecture guide: [`docs/atomic-design.md`](./docs/atomic-design.md) · `pnpm check:architecture`
 - Tailwind CSS v4 · shadcn/ui · Kokonut UI registry (`@kokonutui`)
 - TanStack Query · TanStack Table
 - React Hook Form + Zod

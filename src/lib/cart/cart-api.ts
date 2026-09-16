@@ -1,0 +1,24 @@
+import { apiDelete, apiGet, apiPatch, apiPost } from '@/lib/api';
+import type { ApiData } from '@/lib/api';
+import type { Order } from '@/lib/order';
+import type { Cart, CheckoutInput } from '@/lib/cart/types';
+
+export const cartKeys = {
+  all: ['cart'] as const,
+  current: () => [...cartKeys.all, 'current'] as const,
+};
+
+export const fetchCart = () => apiGet<ApiData<Cart>>('/cart');
+
+export const addCartItem = (bookId: string, quantity: number) =>
+  apiPost<ApiData<Cart>>('/cart/items', { bookId, quantity });
+
+export const updateCartItem = (bookId: string, quantity: number) =>
+  apiPatch<ApiData<Cart>>(`/cart/items/${bookId}`, { quantity });
+
+export const removeCartItem = (bookId: string) => apiDelete<ApiData<Cart>>(`/cart/items/${bookId}`);
+
+export const clearCart = () => apiDelete<ApiData<Cart>>('/cart');
+
+export const checkoutCart = (input: CheckoutInput) =>
+  apiPost<ApiData<Order>>('/cart/checkout', input);
