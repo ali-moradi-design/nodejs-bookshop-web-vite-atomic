@@ -9,7 +9,7 @@ import type { ThemeName, ColorMode } from '@/lib/config';
 
 const sample: Book = {
   id: 'story-1',
-  title: 'Molecules/BookCard',
+  title: 'Clean Architecture',
   author: 'Robert C. Martin',
   description: 'A craftsman’s guide to software structure and design.',
   price: 42,

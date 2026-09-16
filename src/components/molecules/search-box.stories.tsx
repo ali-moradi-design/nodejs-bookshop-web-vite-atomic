@@ -5,21 +5,20 @@ import { SearchBox } from './search-box';
 const meta = {
   title: 'Molecules/SearchBox',
   component: SearchBox,
+  args: {
+    value: '',
+    onChange: () => undefined,
+    placeholder: 'Search books…',
+    'aria-label': 'Search',
+  },
 } satisfies Meta<typeof SearchBox>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: function Render() {
-    const [value, setValue] = useState('');
-    return (
-      <SearchBox
-        value={value}
-        onChange={setValue}
-        placeholder="Search books…"
-        aria-label="Search"
-      />
-    );
+  render: function Render(args) {
+    const [value, setValue] = useState(args.value);
+    return <SearchBox {...args} value={value} onChange={setValue} />;
   },
 };

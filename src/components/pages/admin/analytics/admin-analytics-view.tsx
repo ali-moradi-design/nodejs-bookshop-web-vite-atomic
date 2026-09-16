@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { PageLoader } from '@/components/atoms';
 
 const AdminCharts = lazy(() =>
-  import('@/components/organisms').then((m) => ({ default: m.AdminCharts })),
+  import('@/components/organisms/admin-charts').then((m) => ({ default: m.AdminCharts })),
 );
 
 export function AdminAnalyticsPage() {

@@ -16,7 +16,7 @@ import {
 import { ApiError } from '@/lib/api';
 
 const AdminCharts = lazy(() =>
-  import('@/components/organisms').then((m) => ({ default: m.AdminCharts })),
+  import('@/components/organisms/admin-charts').then((m) => ({ default: m.AdminCharts })),
 );
 
 export function AdminDashboardPage() {
